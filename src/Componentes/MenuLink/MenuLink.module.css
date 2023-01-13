@@ -1,0 +1,10 @@
+.link {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    color: #FEF5AC;
+    text-decoration: none;
+}
+
+.linkDestacado {
+    text-decoration: underline;
+}

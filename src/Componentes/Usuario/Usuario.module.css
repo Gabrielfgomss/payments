@@ -1,0 +1,17 @@
+.card {
+    background-color: #5F6F94;
+    border-radius: 24px;
+    color: #FEF5AC;
+    padding: 42px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.botao {
+    margin-top: 18px;
+    width: 120px;
+    border-radius: 24px;
+    background-color: #243763;
+    color: #FEF5AC;
+    cursor: pointer;
+}
