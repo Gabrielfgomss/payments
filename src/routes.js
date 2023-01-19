@@ -15,33 +15,22 @@ function App() {
       .then((resultado) => {
         setUsuarios(resultado)
       })
-    fetch('https://run.mocky.io/v3/533cd5d7-63d3-4488-bf8d-4bb8c751c989')
-      .then(res => res.json())
-      .then((resultado) => {
-        setStatus(resultado)
-      })
   }, []);
 
-  const [status, setStatus] = useState([]);
+  const [data, setDada] = useState();
 
-  const [card, setCard] = useState();
-
-  function paymentCard(value) {
-    setCard(value);
+  function infoData(value) {
+    setDada(value);
   };
-
-  // Primeiro resolver submit
-  // Ir para a rota recibo
-  // 
-
+ 
   return (
     <BrowserRouter>
 
       <Routes>
         <Route index element={<PaginaInicial usuarios={usuarios} />} />
         <Route path="pagamentos/:id" element={<PaginaDePagamento usuarios={usuarios}
-          payInforms={values => paymentCard(values)} />} />
-        <Route path="recibo" element={<PaginaDeRecibo status={status} card={card} />} />
+          payInforms={values => infoData(values)} />} />
+        <Route path="recibo" element={<PaginaDeRecibo  info={data} />} />
       </Routes>
 
     </BrowserRouter >
